@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Wishes</title>
+  <style>
+    body {
+      font-family: 'Cursive', Arial, sans-serif; /* Cursive font for a romantic touch */
+      background: linear-gradient(to right, #ffebee, #ffc1e3); /* Gradient background for a romantic feel */
+      color: #880e4f; /* Deep red text color for love */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden; /* Hide overflow for decorative elements */
+    }
+
+    #logo-container {
+      margin-bottom: 20px;
+    }
+
+    #logo {
+      width: 100px; /* Adjust size as needed */
+      height: auto;
+    }
+
+    #weddingMessage {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 2em;
+      color: #d81b60; /* Bright pink for the wedding message */
+    }
+
+    #wishes-container {
+      margin-top: 20px;
+      background-color: #fff3f3; /* Light pinkish-white background for the wishes container */
+      border: 3px solid #f06292; /* Bright pink border */
+      border-radius: 20px; /* Rounded corners */
+      padding: 30px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+      max-width: 600px;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+      position: relative; /* For positioning decorative elements */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .wish {
+      background-color: #ffccd5; /* Light pink background for each wish */
+      border-radius: 15px; /* Rounded corners for each wish */
+      padding: 20px;
+      margin: 15px 0;
+      font-size: 1.2em;
+      color: #d50000; /* Deep red text color for wishes */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for each wish element */
+      transition: transform 0.3s ease;
+    }
+
+    .wish:hover {
+      transform: scale(1.05); /* Slight scale up effect on hover */
+    }
+
+    /* Decorative hearts */
+    .heart {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: #ff6f61;
+      transform: rotate(-45deg);
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .heart:before, .heart:after {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: #ff6f61;
+      border-radius: 50%;
+    }
+
+    .heart:before {
+      top: -50px;
+      left: 0;
+    }
+
+    .heart:after {
+      left: 50px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) rotate(-45deg);
+      }
+      50% {
+        transform: translateY(-20px) rotate(-45deg);
+      }
+    }
+
+    /* Positioning multiple hearts */
+    .heart1 {
+      top: -10px;
+      left: 5px;
+    }
+
+    .heart2 {
+      top: -5px;
+      right: -5px;
+    }
+
+    .heart3 {
+      bottom: -40px;
+      left: 50px;
+    }
+
+    .heart4 {
+      bottom: -50px;
+      right: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div id="logo-container">
+    <img src="path/to/your/logo.png" alt="Wedding Logo" id="logo">
+  </div>
+  <div id="weddingMessage">Congratulations on Your Wedding!</div>
+  <div id="wishes-container">
+    <div id="wishes"></div>
+  </div>
+  <script>
+   document.addEventListener("DOMContentLoaded", function() {
+  var wishes = [
+    "Wishing you a lifetime of love and happiness together!",
+    "May your marriage be filled with joy, laughter, and endless love.",
+    "Sending you both prayers for a beautiful and blessed life together.",
+    "May Alimighty Allah bless your maariage and grant you two your heart desires.",
+     "I LOVE YOU TWO "
+  ];
+
+
+      var wishesContainer = document.getElementById("wishes");
+
+      wishes.forEach(function(wish) {
+        var wishElement = document.createElement("p");
+        wishElement.textContent = wish;
+        wishElement.className = "wish"; // Add class for styling
+        wishesContainer.appendChild(wishElement);
+      });
+
+      // Add decorative hearts
+      var hearts = ['heart1', 'heart2', 'heart3', 'heart4'];
+      var wishesContainer = document.getElementById('wishes-container');
+      hearts.forEach(function(className) {
+        var heartElement = document.createElement('div');
+        heartElement.className = 'heart ' + className;
+        wishesContainer.appendChild(heartElement);
+      });
+    });
+  </script>
+</body>
+</html>
