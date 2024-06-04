@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wedding Wishes</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
     body {
-      font-family: 'Cursive', Arial, sans-serif; /* Cursive font for a romantic touch */
+      font-family: 'Great Vibes', cursive; /* Romantic cursive font */
       background: linear-gradient(to right, #ffebee, #ffc1e3); /* Gradient background for a romantic feel */
       color: #880e4f; /* Deep red text color for love */
       display: flex;
@@ -30,7 +32,7 @@
     #weddingMessage {
       text-align: center;
       margin-top: 50px;
-      font-size: 2em;
+      font-size: 2.5em;
       color: #d81b60; /* Bright pink for the wedding message */
     }
 
@@ -61,7 +63,7 @@
       border-radius: 15px; /* Rounded corners for each wish */
       padding: 20px;
       margin: 15px 0;
-      font-size: 1.2em;
+      font-size: 1.5em; /* Larger font size for wishes */
       color: #d50000; /* Deep red text color for wishes */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for each wish element */
       transition: transform 0.3s ease;
@@ -74,8 +76,8 @@
     /* Decorative hearts */
     .heart {
       position: absolute;
-      width: 100px;
-      height: 100px;
+      width: 50px;
+      height: 50px;
       background-color: #ff6f61;
       transform: rotate(-45deg);
       animation: float 5s ease-in-out infinite;
@@ -84,19 +86,19 @@
     .heart:before, .heart:after {
       content: '';
       position: absolute;
-      width: 100px;
-      height: 100px;
+      width: 50px;
+      height: 50px;
       background-color: #ff6f61;
       border-radius: 50%;
     }
 
     .heart:before {
-      top: -50px;
+      top: -25px;
       left: 0;
     }
 
     .heart:after {
-      left: 50px;
+      left: 25px;
       top: 0;
     }
 
@@ -133,14 +135,14 @@
 </head>
 <body>
   <div id="logo-container">
-    <img src="path/to/your/logo.png" alt="Wedding Logo" id="logo">
+    <img src="images/logo.png" alt="Wedding Picture" id="logo">
   </div>
   <div id="weddingMessage">Congratulations on Your Wedding!</div>
   <div id="wishes-container">
     <div id="wishes"></div>
   </div>
   <script>
-   document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
   var wishes = [
     "Wishing you a lifetime of love and happiness together!",
     "May your marriage be filled with joy, laughter, and endless love.",
@@ -148,7 +150,6 @@
     "May Alimighty Allah bless your maariage and grant you two your heart desires.",
      "I LOVE YOU TWO "
   ];
-
 
       var wishesContainer = document.getElementById("wishes");
 
