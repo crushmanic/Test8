@@ -13,8 +13,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start; /* Changed to flex-start to allow scrolling */
-      min-height: 100vh;
       margin: 0;
+      padding: 20px;
       overflow-x: hidden; /* Hide horizontal overflow for decorative elements */
     }
 
@@ -42,6 +42,7 @@
       padding: 30px;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
       max-width: 600px;
+      width: 100%;
       text-align: center;
       animation: fadeIn 2s ease-in-out;
       position: relative; /* For positioning decorative elements */
@@ -74,8 +75,8 @@
     /* Decorative hearts */
     .heart {
       position: absolute;
-      width: 50px; /* Small size hearts */
-      height: 50px;
+      width: 30px; /* Small size hearts */
+      height: 30px;
       background-color: #ff6f61;
       transform: rotate(-45deg);
       animation: float 5s ease-in-out infinite;
@@ -84,19 +85,19 @@
     .heart:before, .heart:after {
       content: '';
       position: absolute;
-      width: 50px;
-      height: 50px;
+      width: 30px;
+      height: 30px;
       background-color: #ff6f61;
       border-radius: 50%;
     }
 
     .heart:before {
-      top: -25px;
+      top: -15px;
       left: 0;
     }
 
     .heart:after {
-      left: 25px;
+      left: 15px;
       top: 0;
     }
 
@@ -105,7 +106,7 @@
         transform: translateY(0) rotate(-45deg);
       }
       50% {
-        transform: translateY(-20px) rotate(-45deg);
+        transform: translateY(-10px) rotate(-45deg);
       }
     }
 
@@ -121,19 +122,19 @@
     }
 
     .heart3 {
-      bottom: -40px;
+      bottom: -20px;
       left: 50px;
     }
 
     .heart4 {
-      bottom: -50px;
+      bottom: -30px;
       right: 50px;
     }
   </style>
 </head>
 <body>
   <div id="logo-container">
-    <img src="images/logo.png" alt="Wedding Logo" id="logo">
+    <img src="images/picture.png" alt="Wedding picture" id="picture">
   </div>
   <div id="weddingMessage">Congratulations on Your Wedding!</div>
   <div id="wishes-container">
