@@ -12,10 +12,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
+      justify-content: flex-start; /* Changed to flex-start to allow scrolling */
+      min-height: 100vh;
       margin: 0;
-      overflow: hidden; /* Hide overflow for decorative elements */
+      overflow-x: hidden; /* Hide horizontal overflow for decorative elements */
     }
 
     #logo-container {
@@ -133,7 +133,7 @@
 </head>
 <body>
   <div id="logo-container">
-    <img src="images/logo.png" alt="Wedding picture" id="images">
+    <img src="images/logo.png" alt="Wedding Logo" id="logo">
   </div>
   <div id="weddingMessage">Congratulations on Your Wedding!</div>
   <div id="wishes-container">
